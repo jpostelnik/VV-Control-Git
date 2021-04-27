@@ -176,8 +176,8 @@ public class Movement {
             SimpleMatrix v = velocity(z_k);
             double speed = v.normF();
             SimpleMatrix u = estimateControlInput(speed, 50);
-//            updatedEst = robotKalmanFilter.update(z_k, u);
-            updatedEst = z_k;
+            updatedEst = robotKalmanFilter.update(z_k, u);
+//             updatedEst = z_k;
 
             System.out.println("dt_actual = " + dt_actual);
             System.out.println("speed = " + speed);
